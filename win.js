@@ -35,7 +35,7 @@ function makeWindow(root, options) {
 	}, [
 		El("div", {class: "titlebar"}, [
 			El("span", {class: "drag"}, [
-			El("p", {class: "title"}, options.title??"Window"),
+				El("p", {class: "title"}, options.title??"Window"),
 			]),
 			El("button", {class: "close"}),
 			El("p", " ", {class:"resize"})
