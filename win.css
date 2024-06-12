@@ -1,0 +1,60 @@
+.drag {
+	cursor: grab;
+}
+.resize {
+	cursor: se-resize;
+}
+
+body {
+	color: white;
+	background-color: #224;
+}
+
+.win {
+	.resize {
+		margin: 0;
+		position: absolute;
+		right: -10px;
+		bottom: -10px;
+		width: 10px;
+		height: 10px;
+	}
+	background-color: #444;
+	position: absolute;
+	border: solid;
+	border-width: 4px;
+	border-color: #464;
+	.titlebar {
+		display: flex;
+		width: 100%;
+		border-bottom: solid;
+		span.drag {
+			flex: fit-content;
+			p.title {
+				user-select: none;
+				font-family: mono;
+				margin: 2px;
+				color: white;
+				display: inline;
+			}
+		}
+		button.close:hover::after {
+			cursor: pointer;
+			content: "X";
+		}
+		button.close {
+			color: black;
+			margin: 2px;
+			background-color: red;
+			border-radius: 100%;
+			width: 1lh;
+			height: 1lh;
+			float: right;
+			display: inline;
+			border: none;
+		}
+	}
+	.content {
+		color: red;
+	}
+}
