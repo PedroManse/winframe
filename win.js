@@ -1,11 +1,9 @@
+let _zcount = 1;
 function _initWinFrame(win) {
 	const controller = new AbortController();
 	const title = $(".titlebar .title", win).innerText;
 	$(".titlebar .drag", win).addEventListener("mousedown", (e)=>{
-		$$(".win").forEach(wn=>{
-			wn.style["z-index"]=1;
-		})
-		win.style["z-index"]=2;
+		win.style["z-index"]=++_zcount;
 		e.preventDefault();
 		const controller = new AbortController();
 		const followMouse = ()=>{

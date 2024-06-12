@@ -9,7 +9,9 @@ function newTextPad() {
 			"border-radius": 0,
 		}
 	});
-	const newWin = makeWindow(root, {top: "40px", left: "50px", title: "test window"})
+	const top = ~~(Math.random()*100)+"px";
+	const left = ~~(Math.random()*100)+"px";
+	const newWin = makeWindow(root, {top, left, title: "test window"})
 	document.body.appendChild(newWin);
 }
 
